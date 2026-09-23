@@ -110,7 +110,7 @@ nav a {
 
 /* Efeito ao passar o mouse */
 nav a:hover {
-    color: #2563eb;
+    color: #e669b6;
     background: #eff6ff;
     transform: translateY(-2px);
 }
@@ -127,7 +127,7 @@ nav a::after {
     width: 0;
     height: 2px;
 
-    background: #2563eb;
+    background: #e669b6;
     border-radius: 999px;
 
     transform: translateX(-50%);
@@ -141,7 +141,7 @@ nav a:hover::after {
 
 /* Página atualmente selecionada */
 nav a.active {
-    color: #2563eb;
+    color: #e669b6;
     background: #eff6ff;
 }
 
@@ -155,7 +155,7 @@ nav a.active::after {
    ========================================================= */
 
 main a:not(.btn):not(nav a) {
-    color: #2563eb;
+    color: #e669b6;
     font-weight: 600;
     text-decoration: none;
 
@@ -165,7 +165,7 @@ main a:not(.btn):not(nav a) {
 }
 
 main a:not(.btn):not(nav a):hover {
-    color: #1d4ed8;
+    color: #e669b6;
     text-decoration: underline;
 }
 
