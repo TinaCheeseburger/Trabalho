@@ -1,3 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+/* ---------- VARIÁVEIS ---------- */
+
+:root {
+    --cor-fundo: #fffaf2;
+    --cor-texto: #242424;
+    --cor-principal: #ff5c8a;
+    --cor-secundaria: #6c63ff;
+    --cor-amarela: #ffd166;
+    --cor-verde: #72e6a5;
+    --cor-branca: #ffffff;
+
+    --sombra: 6px 6px 0 #242424;
+    --borda: 3px solid #242424;
+
+    --raio: 18px;
+}
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: "Poppins", sans-serif;
+    line-height: 1.7;
+}
+
+/* ---------- TÍTULOS ---------- */
+
+h1,
+h2,
+h3 {
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    letter-spacing: -3px;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    max-width: 700px;
+    margin-bottom: 18px;
+}
+
+strong {
+    color: var(--cor-principal);
+}
+
 /* =========================================================
    LINKS / NAVEGAÇÃO ENTRE PÁGINAS
    ========================================================= */
@@ -124,5 +197,318 @@ main a:not(.btn):not(nav a):hover {
 
     nav a {
         width: 100%;
+    }
+}
+
+/* ---------- HEADER / NAV ---------- */
+
+header {
+    width: min(1100px, 90%);
+    margin: 25px auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--cor-branca);
+    border: var(--borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--cor-texto);
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+}
+
+/* ---------- CONTEÚDO ---------- */
+
+main {
+    width: min(1100px, 90%);
+    margin: 70px auto;
+}
+
+section {
+    margin-bottom: 90px;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 65vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px;
+    border: var(--borda);
+    border-radius: 30px;
+
+    background: var(--cor-amarela);
+    box-shadow: 10px 10px 0 var(--cor-texto);
+
+    transform: rotate(-1deg);
+}
+
+.hero:hover {
+    transform: rotate(0deg) translateY(-5px);
+    transition: 0.25s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+/* ---------- BOTÕES ---------- */
+
+button,
+.btn {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border: var(--borda);
+    border-radius: 12px;
+
+    background: var(--cor-principal);
+    color: white;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--cor-texto);
+
+    transition: 0.15s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 var(--cor-texto);
+}
+
+/* ---------- CARDS ---------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    padding: 30px;
+
+    background: var(--cor-branca);
+    border: var(--borda);
+    border-radius: var(--raio);
+
+    box-shadow: 6px 6px 0 var(--cor-texto);
+
+    transition: 0.2s ease;
+}
+
+.card:nth-child(2) {
+    background: #e8e5ff;
+}
+
+.card:nth-child(3) {
+    background: #d9ffe8;
+}
+
+.card:hover {
+    transform: translateY(-8px) rotate(1deg);
+}
+
+/* ---------- IMAGENS ---------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    border-radius: var(--raio);
+    border: var(--borda);
+}
+
+figure {
+    margin: 30px 0;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* ---------- LISTAS ---------- */
+
+ul,
+ol {
+    margin: 20px 0 20px 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ---------- FORMULÁRIOS ---------- */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 14px 16px;
+
+    margin-bottom: 18px;
+
+    border: var(--borda);
+    border-radius: 12px;
+
+    background: white;
+    color: var(--cor-texto);
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--cor-principal);
+    box-shadow: 4px 4px 0 var(--cor-principal);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* ---------- CITAÇÃO ---------- */
+
+blockquote {
+    margin: 30px 0;
+    padding: 25px;
+
+    background: var(--cor-verde);
+    border: var(--borda);
+    border-radius: var(--raio);
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    box-shadow: 6px 6px 0 var(--cor-texto);
+}
+
+/* ---------- TABELAS ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+
+    background: white;
+    border: var(--borda);
+}
+
+th,
+td {
+    padding: 15px;
+    border: 2px solid var(--cor-texto);
+    text-align: left;
+}
+
+th {
+    background: var(--cor-secundaria);
+    color: white;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    width: min(1100px, 90%);
+    margin: 80px auto 30px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: var(--cor-texto);
+    color: white;
+
+    border-radius: var(--raio);
+}
+
+footer a {
+    color: var(--cor-amarela);
+}
+
+/* ---------- CLASSES EXTRAS ---------- */
+
+.destaque {
+    background: var(--cor-principal);
+    color: white;
+
+    padding: 5px 12px;
+    border-radius: 10px;
+}
+
+.amarelo {
+    background: var(--cor-amarela);
+}
+
+.roxo {
+    background: var(--cor-secundaria);
+    color: white;
+}
+
+.verde {
+    background: var(--cor-verde);
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        margin-top: 40px;
+    }
+
+    .hero {
+        padding: 35px 25px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    section {
+        margin-bottom: 60px;
     }
 }
