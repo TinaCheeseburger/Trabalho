@@ -1,140 +1,128 @@
-/* ===== RESET ===== */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+/* =========================================================
+   LINKS / NAVEGAÇÃO ENTRE PÁGINAS
+   ========================================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
 }
- 
-/* ===== CORES ODS ===== */
-:root {
---verde: #2E7D32;
---azul: #0288D1;
---amarelo: #FBC02D;
---laranja: #F57C00;
---vermelho: #E53935;
---branco: #ffffff;
---cinza: #f5f7fa;
---escuro: #1f2937;
+
+nav a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 15px;
+
+    color: #475569;
+    background: transparent;
+
+    border-radius: 10px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
 }
- 
-/* ===== BODY ===== */
-body {
-font-family: 'Segoe UI', sans-serif;
-background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
-min-height: 100vh;
-color: var(--escuro);
+
+/* Efeito ao passar o mouse */
+nav a:hover {
+    color: #2563eb;
+    background: #eff6ff;
+    transform: translateY(-2px);
 }
- 
-/* ===== HEADER ===== */
-header {
-background: linear-gradient(
-90deg,
-#E5243B,
-#DDA63A,
-#4C9F38,
-#C5192D,
-#FF3A21,
-#26BDE2
-);
-color: white;
-text-align: center;
-padding: 50px 20px;
-box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+
+/* Linha animada embaixo do link */
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 4px;
+
+    width: 0;
+    height: 2px;
+
+    background: #2563eb;
+    border-radius: 999px;
+
+    transform: translateX(-50%);
+
+    transition: width 0.25s ease;
 }
- 
-header h1 {
-font-size: 3rem;
-margin-bottom: 10px;
+
+nav a:hover::after {
+    width: 55%;
 }
- 
-header p {
-font-size: 1.2rem;
-opacity: 0.95;
+
+/* Página atualmente selecionada */
+nav a.active {
+    color: #2563eb;
+    background: #eff6ff;
 }
- 
-/* ===== CONTAINER ===== */
-.container {
-width: 90%;
-max-width: 1200px;
-margin: 40px auto;
+
+nav a.active::after {
+    width: 55%;
 }
- 
-/* ===== CARDS ===== */
-.cards {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 25px;
+
+
+/* =========================================================
+   LINKS GERAIS
+   ========================================================= */
+
+main a:not(.btn):not(nav a) {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
 }
- 
-.card {
-background: white;
-padding: 25px;
-border-radius: 20px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-transition: all 0.3s ease;
-border-top: 6px solid var(--verde);
+
+main a:not(.btn):not(nav a):hover {
+    color: #1d4ed8;
+    text-decoration: underline;
 }
- 
-.card:hover {
-transform: translateY(-8px);
-box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
- 
-.card h3 {
-color: var(--verde);
-margin-bottom: 10px;
-}
- 
-.card p {
-color: #555;
-}
- 
-/* ===== BOTÕES ===== */
-.btn {
-display: inline-block;
-margin-top: 15px;
-padding: 12px 24px;
-border-radius: 50px;
-background: linear-gradient(45deg, #4CAF50, #26A69A);
-color: white;
-text-decoration: none;
-font-weight: bold;
-transition: .3s;
-}
- 
-.btn:hover {
-transform: scale(1.05);
-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
- 
-/* ===== SEÇÃO ===== */
-.section {
-padding: 50px 0;
-}
- 
-.section h2 {
-text-align: center;
-margin-bottom: 30px;
-font-size: 2rem;
-color: var(--escuro);
-}
- 
-/* ===== FOOTER ===== */
-footer {
-margin-top: 50px;
-background: #1E293B;
-color: white;
-text-align: center;
-padding: 25px;
-}
- 
-/* ===== RESPONSIVO ===== */
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
 @media (max-width: 768px) {
-header h1 {
-font-size: 2.2rem;
+
+    nav {
+        width: 100%;
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 9px 11px;
+        font-size: 0.88rem;
+    }
 }
- 
-.section h2 {
-font-size: 1.7rem;
-}
+
+@media (max-width: 480px) {
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    nav a {
+        width: 100%;
+    }
 }
