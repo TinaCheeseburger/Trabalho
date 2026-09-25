@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@font-face {
+    font-family: "LotusHeart";
+    src: url("../fontes/LotusHeart.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* ---------- VARIÁVEIS ---------- */
 
@@ -41,14 +46,35 @@ body {
 h1,
 h2,
 h3 {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Baloo 2", sans-serif;
     line-height: 1.1;
     font-weight: 700;
 }
 
 h1 {
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
-    letter-spacing: -3px;
+    font-family: "LotusHeart", sans-serif;
+    font-size: clamp(8rem, 11vw, 10rem);
+    font-weight: 200;
+
+    color: #d40156;
+
+    letter-spacing: 2px;
+
+    text-shadow: 4px 3px 2px rgba(36, 36, 36, 0.35);
+
+    background: linear-gradient(
+        180deg,
+        #ff2f92 0%,
+        #ff8fc4 100%
+    );
+
+    background-clip: text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-text-stroke: 1px #f780ba;
+
 }
 
 h2 {
@@ -511,4 +537,53 @@ footer a {
     section {
         margin-bottom: 60px;
     }
+}
+
+.titulo {
+    margin: 60px 0;
+    padding: 25px;
+    position: relative;
+}
+
+.titulo strong {
+    display: block;
+
+    font-family: "Baloo 2", sans-serif;
+    font-size: clamp(5rem, 2vw, 2rem);
+    font-weight: 800;
+
+    background: linear-gradient(
+        139deg,
+        #cc4e8b 0%,
+        #ffb6d9 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+
+    line-height: 1;
+    letter-spacing: -3px;
+
+
+
+}
+
+.titulo small {
+    display: block;
+
+    margin-top: -20px;
+    margin-left: 135px;
+
+    color: var(--cor-texto);
+    font-family: "Baloo 2", sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    font-weight: 700;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
 }
