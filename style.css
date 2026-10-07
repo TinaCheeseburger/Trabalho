@@ -464,6 +464,17 @@ textarea {
     min-height: 150px;
     resize: vertical;
 }
+.form-section .form-group {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.form-section .form-group input,
+.form-section .form-group select,
+.form-section .form-group textarea {
+    width: 100%;
+}
 
 /* ---------- CITAÇÃO ---------- */
 
@@ -635,7 +646,7 @@ footer a {
     height: 8px;
     width: 1100px;
     margin-left: 20px;
-    background: #cc4e8b;
+    background: #d15993;
     border-radius: 10px;
     vertical-align: middle;
 }
@@ -662,4 +673,169 @@ footer a {
     font-size: clamp(1.5rem, 4vw, 2.8rem);
     font-weight: 650;
 
+}
+/* ---------- CABEÇALHO DO FORMULÁRIO ---------- */
+
+.form-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.form-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 15px;
+
+    background: #ffe0ed;
+
+    border: var(--borda);
+    border-radius: 50%;
+
+    color: #c04f86;
+
+    font-size: 1.5rem;
+
+    box-shadow: 4px 4px 0 var(--cor-texto);
+}
+
+.form-header h2 {
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #6b6b6b;
+
+    font-size: 1rem;
+}
+
+
+/* ---------- TÍTULOS DAS SEÇÕES ---------- */
+
+.form-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+    margin-bottom: 25px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 2px solid #f0d8e3;
+}
+
+.form-title > span {
+   display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 42px;
+    height: 42px;
+
+    background: #ffe0ed;
+
+    border: 2px solid #242424;
+
+    border-radius: 50%;
+
+    color: #c04f86;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-weight: 800;
+}
+
+.form-title h3 {
+    margin: 0;
+    position: relative;
+    left: 750px;
+    font-size: 2.45rem;
+}
+
+.form-title p {
+    margin: 2px 0 0;
+
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+
+/* ---------- BOTÃO DE CADASTRO ---------- */
+
+.form-submit {
+    margin-top: 40px;
+
+    padding-top: 25px;
+
+    text-align: center;
+
+    border-top: 2px solid #f0d8e3;
+}
+
+.form-submit p {
+    margin: 0 auto 20px;
+
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+.form-submit button {
+    min-width: 230px;
+
+    padding: 15px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #e669b6,
+        #c04f86
+    );
+
+    border: var(--borda);
+    border-radius: 14px;
+
+    color: white;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 1.15rem;
+    font-weight: 800;
+
+    box-shadow: 5px 5px 0 var(--cor-texto);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.form-submit button:hover {
+    transform: translate(3px, 3px);
+
+    box-shadow: 2px 2px 0 var(--cor-texto);
+
+    background: linear-gradient(
+        135deg,
+        #f07ac2,
+        #cc5c94
+    );
+}
+
+.form-submit button:active {
+    transform: translate(5px, 5px);
+
+    box-shadow: none;
 }
