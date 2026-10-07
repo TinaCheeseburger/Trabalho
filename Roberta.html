@@ -1,178 +1,405 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" href="../CSS/style.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <title>Cadastro - essenZa</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-        <center><h1>⤷essenZa</h1></center>
+
+    <center>
+        <h1>⤷essenZa</h1>
+    </center>
+
     <header>
-    <nav>
-        <a href="../index.html">Início</a>
-        <a href="../paginas/pagina2.2.html">Página 1</a>
-        <a href="pagina2.3.html" class="active">Página 2</a>
-        <a href="../paginas/pagina2.4.html">Página 3</a>
-    </nav>
-</header>
-  <center><h3>todas as pessoas • os mesmos direitos</h3></center>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="../paginas/pagina2.2.html">Página 1</a>
+            <a href="pagina2.3.html" class="active">Página 2</a>
+            <a href="../paginas/pagina2.4.html">Página 3</a>
+        </nav>
+    </header>
 
-<body>
+    <center>
+        <h3>todas as pessoas • os mesmos direitos</h3>
+    </center>
 
-   <section class="form-section">
-<h1>Cadastro do Cliente:</h1>
-<form>
-    <div class="form-group">
-        <label for="text">Nome Completo:</label>
-        <input type="text" name="text" placeholder="Digite seu nome" required>
+<section class="form-section">
+    <div class="form-header">
+        <span class="form-icon">𖹭</span>
 
-
+        <h2>Cadastro do Cliente:</h2>
     </div>
-    <div class="form-group">
-        <label for="text">CPF:</label>
-        <input type="number" name="number" placeholder="000.000.000-00" required>
-
-
-    </div>
-    <div class="form-group">
-        <label for="text">RG:</label>
-        <input type="number" name="number" placeholder="00.000.000-0" required>
-
-
-    </div>
-
-
-    <div class="form-group">
-        <label for="text">Endereço:</label>
-        <input type="text" name="text" placeholder="Digite seu endereço" required>
-
-
-    </div>
-    
-    <div class="form-group">
-    <label for="select">Estado civil:</label>
-        <select id="select" name="select">
-    <option value="Solteiro(a)">Solteiro(a)</option>
-    <option value="Casado(a)">Casado(a)</option>
-    <option value="Viuvô(a)">Viuvô(a)</option>
-    <option value="Divorciado(a)">Divorciado(a)</option>
-    </select>
-    </div>
-    
-    <div class="form-group">
-        <label for="date">Data de nascimento</label>
-        <input type="date" name="date" placeholder="Digite a data de nascimento" required>
-
-    </div>
+        <form>
+            <div class="form-title">
+                <span>01</span>
+                <h3>DADOS PESSOAIS</h3>
+            </div>
  
+            <!-- DADOS PESSOAIS -->
 
-<div class="form-group">
-    <label for="select">Sexo</label>
-        <select id="select" name="select">
-<option value="feminino">feminino</option>
-<option value="masculino">masculino</option>
-</select>
-</div>
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input
+                    type="text"
+                    id="cpf"
+                    name="cpf"
+                    placeholder="000.000.000-00"
+                    maxlength="14"
+                    inputmode="numeric"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="rg">RG:</label>
+                <input
+                    type="text"
+                    id="rg"
+                    name="rg"
+                    placeholder="00.000.000-0"
+                    maxlength="12"
+                    inputmode="numeric"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input
+                    type="text"
+                    id="endereco"
+                    name="endereco"
+                    placeholder="Digite seu endereço"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="estado-civil">Estado civil:</label>
+
+                <select id="estado-civil" name="estado-civil">
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="viuvo">Viúvo(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="data-nascimento">Data de nascimento:</label>
+
+                <input
+                    type="date"
+                    id="data-nascimento"
+                    name="data-nascimento"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+
+                <select id="sexo" name="sexo">
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nacionalidade">Nacionalidade:</label>
+
+                <input
+                    type="text"
+                    id="nacionalidade"
+                    name="nacionalidade"
+                    placeholder="Digite sua nacionalidade"
+                    required
+                >
+            </div>
 
 
-    <div class="form-group">
-        <label for="text">Nacionalidade:</label>
-        <input type="text" name="text" placeholder="Digite sua Nacionalidade:" required>
+            <!-- CONTATO -->
+
+        <div class="form-title">
+              <span>02</span>
+            <div>
+                <center><h3>CONTATO</h3></center>
+            </div>
+         </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(00) 0000-0000"
+                    maxlength="14"
+                    inputmode="numeric"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp:</label>
+
+                <input
+                    type="tel"
+                    id="whatsapp"
+                    name="whatsapp"
+                    placeholder="(00) 00000-0000"
+                    maxlength="15"
+                    inputmode="numeric"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu Email"
+                >
+            </div>
 
 
-    </div>
+            <!-- ENDEREÇO -->
 
-    <h3>CONTATO</h3>
-<div class="form-group">
-        <label for="tel">Telefone</label>
-        <input type="tel" name="tel" placeholder="00 00000-0000">
-</div>
-<div class="form-group">
-        <label for="tel">Whatsapp</label>
-        <input type="tel" name="tel" placeholder="00 00000-0000">
-</div>
-<div class="form-group">
-        <label for="text">Email:</label>
-        <input type="text" name="text" placeholder="Digite seu Email">
+        <div class="form-title">
+            <span>03</span>
+            <div>
+                <center><h3>ENDEREÇO</h3></center>
+            </div>
+        </div>
+
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+
+                <input
+                    type="text"
+                    id="cep"
+                    name="cep"
+                    placeholder="00000-000"
+                    maxlength="9"
+                    inputmode="numeric"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="rua">Rua/Avenida:</label>
+
+                <input
+                    type="text"
+                    id="rua"
+                    name="rua"
+                    placeholder="Digite sua rua/avenida"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="numero">Número:</label>
+
+                <input
+                    type="text"
+                    id="numero"
+                    name="numero"
+                    placeholder="Digite o número"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="complemento">Complemento:</label>
+
+                <input
+                    type="text"
+                    id="complemento"
+                    name="complemento"
+                    placeholder="Digite o complemento (opcional)"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+
+                <input
+                    type="text"
+                    id="bairro"
+                    name="bairro"
+                    placeholder="Digite o bairro"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+
+                <input
+                    type="text"
+                    id="cidade"
+                    name="cidade"
+                    placeholder="Digite a cidade"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+
+                <select id="estado" name="estado">
+
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+
+                </select>
+            </div>
+            <div class="form-submit">
+
+                <p>
+                    Confira seus dados antes de finalizar o cadastro.
+                </p>
+
+                <button type="submit">
+                    Finalizar cadastro ✦
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
 
 
+    <!-- FORMATAÇÃO DOS CAMPOS -->
 
-    </div>
-    <h3>ENDEREÇO</h3>
-    <div class="form-group">
-        <label for="text">CEP:</label>
-        <input type="text" name="text" placeholder="0000-000" required>
+    <script>
 
+        // CPF
+        document.getElementById("cpf").addEventListener("input", function () {
 
-    </div>
-    <div class="form-group">
-        <label for="text">Rua/avenida:</label>
-        <input type="text" name="text" placeholder="Digite sua rua/avenida" required>
+            let valor = this.value.replace(/\D/g, "");
 
+            valor = valor.substring(0, 11);
 
-    </div>
-    <div class="form-group">
-        <label for="text">Número:</label>
-        <input type="text" name="text" placeholder="Digite o número" required>
+            valor = valor.replace(/^(\d{3})(\d)/, "$1.$2");
+            valor = valor.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
+            valor = valor.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4");
 
+            this.value = valor;
 
-    </div> 
-    <div class="form-group">
-        <label for="text">Complemento:</label>
-        <input type="text" name="text" placeholder="Digite o Complemento(opcional)">
+        });
 
 
-    </div>
+        // RG
+        document.getElementById("rg").addEventListener("input", function () {
 
-    <div class="form-group">
-        <label for="text">Bairro:</label>
-        <input type="text" name="text" placeholder="Digite o bairro" required>
+            let valor = this.value.replace(/\D/g, "");
+
+            valor = valor.substring(0, 9);
+
+            valor = valor.replace(/^(\d{2})(\d)/, "$1.$2");
+            valor = valor.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+            valor = valor.replace(/^(\d{2})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4");
+
+            this.value = valor;
+
+        });
 
 
-    </div>
-    <div class="form-group">
-        <label for="text">Cidade:</label>
-        <input type="text" name="text" placeholder="Digite a cidade" required>
+        // CEP
+        document.getElementById("cep").addEventListener("input", function () {
+
+            let valor = this.value.replace(/\D/g, "");
+
+            valor = valor.substring(0, 8);
+
+            valor = valor.replace(/^(\d{5})(\d)/, "$1-$2");
+
+            this.value = valor;
+
+        });
 
 
-    </div>
- <label for="select">Estado</label>
-        <select id="select" name="select">
-<option value="RJ">RJ</option>
-<option value="SP">SP</option>
-<option value="MG">MG</option>
-<option value="ES">ES</option>
-<option value="BA">BA</option>
-<option value="TO">TO</option>
-<option value="DF">DF</option>
-<option value="AC">AC</option>
-<option value="PR">PR</option>
-<option value="AP">AP</option>
-<option value="AM">AM</option>
-<option value="RO">RO</option>
-<option value="RR">RR</option>
-<option value="AL">AL</option>
-<option value="CE">CE</option>
-<option value="MA">MA</option>
-<option value="MT">MT</option>
-<option value="MS">MS</option>
-<option value="GO">GO</option>
-<option value="PB">PB</option>
-<option value="PE">PE</option>
-<option value="PI">PI</option>
-<option value="RN">RN</option>
-<option value="SE">SE</option>
-<option value="PA">PA</option>
-<option value="SC">SC</option>
-<option value="RS">RS</option>
-        </select>
-</div>
+        // TELEFONE
+        document.getElementById("telefone").addEventListener("input", function () {
 
-</form>
-   </section>
+            let valor = this.value.replace(/\D/g, "");
+
+            valor = valor.substring(0, 10);
+
+            valor = valor.replace(/^(\d{2})(\d)/, "($1) $2");
+            valor = valor.replace(/(\d{4})(\d)/, "$1-$2");
+
+            this.value = valor;
+
+        });
+
+
+        // WHATSAPP
+        document.getElementById("whatsapp").addEventListener("input", function () {
+
+            let valor = this.value.replace(/\D/g, "");
+
+            valor = valor.substring(0, 11);
+
+            valor = valor.replace(/^(\d{2})(\d)/, "($1) $2");
+            valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+
+            this.value = valor;
+
+        });
+
+    </script>
+
 </body>
 </html>
