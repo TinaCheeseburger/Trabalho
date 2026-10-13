@@ -14,7 +14,7 @@
 
 /* ========================================================= RESET ========================================================= */
 
-{
+* {
 margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -413,6 +413,8 @@ font-size: 0.85rem; font-weight: 600; }
 
 .login-decoration { width: 45%;
 
+border-radius: 0 25px 25px 0;
+
 position: relative;
 
 display: flex; align-items: center; justify-content: center;
@@ -509,6 +511,8 @@ padding: 45px 35px; }
 
 .login-decoration { width: 100%;
 
+border-radius: 0 0 25px 25px;
+
 min-height: 230px;
 
 padding: 35px; }
@@ -582,6 +586,8 @@ margin-top: 35px; }
 .login-card { border-radius: 20px;
 
 box-shadow: 7px 7px 0 var(--cor-texto); }
+
+.login-decoration { border-radius: 0 0 17px 17px; }
 
 .login-form-area { padding: 35px 22px; }
 
