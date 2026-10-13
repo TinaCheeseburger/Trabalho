@@ -3,53 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login | Essenza</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <center><h1>⤷essenZa</h1></center>
-    <header>
-    <nav>
-        <a href="../index.html">Início</a>
-        <a href="../paginas/pagina2.2.html">Página 1</a>
-        <a href="../paginas/pagina2.3.html">Página 2</a>
-        <a href="pagina2.4.html" class="active">Página 3</a>
-    </nav>
-    </header>
-      <center><h3>todas as pessoas • os mesmos direitos</h3></center>
-      <main class="login-main">
-  <div class="login-card">
-    <section class="login-form-area login-area-entrar">
-      <div class="login-header">
-        <h2>Bem-vinda de volta!</h2>
-        <p>Entre na sua conta para continuar.</p>
-      </div>
-      <form>
-        <label for="email-login">E-mail</label>
-        <input id="email-login" type="email" placeholder="Seu e-mail" />
-        <label for="senha-login">Senha</label>
-        <input id="senha-login" type="password" placeholder="Sua senha" />
-        <button class="login-button" type="button">Entrar</button>
-      </form>
-      <div class="login-switch">
-        <p>Ainda não tem uma conta?</p>
-        <span class="link-button">Cadastre-se</span>
-      </div>
-    </section>
+    <center><h1>⤷essenZa</h1></center>
 
-    <section class="login-decoration">
-      <div class="login-decoration-content">
-        <span class="decoration-star">✿</span>
-        <h2>Olá, amiga!</h2>
-        <p>Crie sua conta e venha conhecer o Essenza.</p>
-        <div class="decoration-symbols">♡ &nbsp; ✿ &nbsp; ♡</div>
-      </div>
-    </section>
-  </div>
-</main>
+    <header>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="../paginas/pagina2.2.html">Página 1</a>
+            <a href="../paginas/pagina2.3.html">Página 2</a>
+            <a href="pagina2.4.html" class="active">Página 3</a>
+        </nav>
+    </header>
+
+    <center><h3>todas as pessoas • os mesmos direitos</h3></center>
+
+    <main class="login-main">
+        <div class="login-card">
+            <section class="login-form-area login-area-entrar">
+                <div class="login-header">
+                    <div class="login-icon" aria-hidden="true">♡</div>
+                    <h2>Bem-vinda de volta!</h2>
+                    <p>Entre na sua conta para continuar.</p>
+                </div>
+
+                <form>
+                    <label for="email-login">E-mail</label>
+                    <input id="email-login" type="email" name="email-login"
+                           placeholder="Seu e-mail" autocomplete="email" required>
+
+                    <label for="senha-login">Senha</label>
+                    <input id="senha-login" type="password" name="senha-login"
+                           placeholder="Sua senha" autocomplete="current-password" required>
+
+                    <button class="login-button" type="button">Entrar</button>
+                </form>
+
+                <div class="login-switch">
+                    <p>Ainda não tem uma conta?</p>
+                    <button class="link-button" type="button"
+                            onclick="document.querySelector('.login-card').classList.add('mostrar-cadastro')">
+                        Cadastre-se
+                    </button>
+                </div>
+            </section>
+
+            <section class="login-form-area login-area-cadastro">
+                <div class="login-header">
+                    <div class="login-icon" aria-hidden="true">✿</div>
+                    <h2>Crie sua conta!</h2>
+                    <p>Venha fazer parte do Essenza.</p>
+                </div>
+
+                <form>
+                    <label for="nome-cadastro">Nome</label>
+                    <input id="nome-cadastro" type="text" name="nome"
+                           placeholder="Seu nome" autocomplete="name" required>
+
+                    <label for="email-cadastro">E-mail</label>
+                    <input id="email-cadastro" type="email" name="email-cadastro"
+                           placeholder="Seu e-mail" autocomplete="email" required>
+
+                    <label for="senha-cadastro">Senha</label>
+                    <input id="senha-cadastro" type="password" name="senha-cadastro"
+                           placeholder="Crie uma senha" autocomplete="new-password" required>
+
+                    <button class="login-button" type="button">Criar conta</button>
+                </form>
+
+                <div class="login-switch">
+                    <p>Já tem uma conta?</p>
+                    <button class="link-button" type="button"
+                            onclick="document.querySelector('.login-card').classList.remove('mostrar-cadastro')">
+                        Entrar
+                    </button>
+                </div>
+            </section>
+
+            <section class="login-decoration">
+                <div class="login-decoration-content">
+                    <span class="decoration-star" aria-hidden="true">✿</span>
+                    <h2>Olá, amiga!</h2>
+                    <p>Um espaço para conhecer, aprender e fortalecer a igualdade.</p>
+                    <div class="decoration-symbols" aria-hidden="true">♡ &nbsp; ✿ &nbsp; ♡</div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
 
 </body>
 </html>
