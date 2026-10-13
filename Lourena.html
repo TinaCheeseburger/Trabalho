@@ -3,23 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essenza</title>
-     <link rel="stylesheet" href="../CSS/style.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Objetivos de Desenvolvimento Sustentável | Essenza</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .ods-lista { width: min(1100px, 90%); margin: 45px auto 80px; }
+        .ods-intro { text-align: center; margin-bottom: 32px; }
+        .ods-intro h2 { margin-bottom: 8px; }
+        .ods-card {
+            display: flex; align-items: center; gap: 24px;
+            padding: 20px; margin-bottom: 22px;
+            background: var(--cor-branca); border: var(--borda);
+            border-radius: var(--raio); box-shadow: var(--sombra);
+        }
+        .ods-card img { width: 190px; height: 190px; object-fit: cover; flex-shrink: 0; border: var(--borda); border-radius: 12px; }
+        .ods-texto h2 { margin: 0 0 10px; color: var(--cor-rosa-escuro); }
+        .ods-texto p { margin: 0; line-height: 1.7; }
+        @media (max-width: 650px) {
+            .ods-card { flex-direction: column; align-items: flex-start; }
+            .ods-card img { width: min(100%, 260px); height: auto; aspect-ratio: 1; align-self: center; }
+        }
+    </style>
 </head>
 <body>
-        <center><h1>⤷essenZa</h1></center>
+    <center><h1>⤷essenZa</h1></center>
     <header>
-    <nav>
-        <a href="../index.html">Início</a>
-        <a href="pagina2.2.html" class="active">Página 1</a>
-        <a href="../paginas/pagina2.3.html">Página 2</a>
-        <a href="../paginas/pagina2.4.html">Página 3</a>
-    </nav>
-</header>
-  <center><h3>todas as pessoas • os mesmos direitos</h3></center>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="pagina2.2.html">Página 1</a>
+            <a href="pagina2.3.html" class="active">Página 2</a>
+            <a href="pagina2.4.html">Página 3</a>
+        </nav>
+    </header>
 
+    <main class="ods-lista">
+        <div class="ods-intro">
+            <h2>Conheça os Objetivos de Desenvolvimento Sustentável</h2>
+            <h3>Pequenas ações e grandes ideias podem ajudar a construir um mundo mais justo e sustentável.</h3>
+        </div>
+        <article class="ods-card">
+            <img src="../img/ODS-01-Erradicacao-da-Pobreza.png" alt="ODS 1 — Erradicação da Pobreza">
+            <div class="ods-texto">
+                <h2>ODS 1 — Erradicação da Pobreza</h2>
+                <p>A ODS 1 busca erradicar a pobreza extrema até 2030, para garantir que populações em situações de vulnerabilidade tenham mais acesso igualitário e recursos básicos como educação, recursos econômicos, terras e sistemas de proteção social.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-02-Fome-Zero.png" alt="ODS 2 — Fome Zero e Agricultura Sustentável">
+            <div class="ods-texto">
+                <h2>ODS 2 — Fome Zero e Agricultura Sustentável</h2>
+                <p>A ODS 2 trabalha para erradicar a fome, promover a agricultura sustentável e dobrar a produtividade dos pequenos produtores, para garantir resiliência dos ecossistemas contra as mudanças climáticas.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-03-Saude-e-Bem-Estar.png" alt="ODS 3 — Saúde e Bem-Estar">
+            <div class="ods-texto">
+                <h2>ODS 3 — Saúde e Bem-Estar</h2>
+                <p>A ODS 3 busca garantir a saúde e o bem-estar coletivo, trabalhando para reduzir a mortalidade materna e infantil, acabar com epidemias como HIV e tuberculose, combater o abuso de substâncias e assegurar o acesso universal a serviços de saúde sexual e reprodutiva.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-04-Educacao-de-Qualidade.png" alt="ODS 4 — Educação de Qualidade">
+            <div class="ods-texto">
+                <h2>ODS 4 — Educação de Qualidade</h2>
+                <p>A ODS 4 visa garantir uma educação inclusiva e de qualidade, assegurando que todas as crianças e jovens completem o ensino primário e secundário gratuito, além de expandir o acesso universal à educação técnica, profissional e superior.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-06-Agua-Potavel-e-Saneamento.png" alt="ODS 6 — Água Potável e Saneamento">
+            <div class="ods-texto">
+                <h2>ODS 6 — Água Potável e Saneamento</h2>
+                <p>A ODS 6 busca assegurar o acesso universal à água potável e ao saneamento seguro, focando na eliminação da defecação a céu aberto, na melhoria da qualidade da água através da redução da poluição e na proteção de ecossistemas vitais como rios, lagos e aquíferos.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-07-Energia-Limpa.png" alt="ODS 7 — Energia Limpa e Acessível">
+            <div class="ods-texto">
+                <h2>ODS 7 — Energia Limpa e Acessível</h2>
+                <p>A ODS 7 visa garantir o acesso universal a serviços de energia confiáveis e modernos, trabalhando para aumentar substancialmente a participação de fontes renováveis na matriz energética global e duplicar a taxa mundial de melhoria da eficiência energética.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-08-Trabalho-Decente.png" alt="ODS 8 — Trabalho Decente e Crescimento Econômico">
+            <div class="ods-texto">
+                <h2>ODS 8 — Trabalho Decente e Crescimento Econômico</h2>
+                <p>A ODS 8 busca promover o crescimento econômico sustentável e o trabalho decente, atuando diretamente na erradicação do trabalho forçado, do trabalho infantil e da escravidão moderna, além de estimular o empreendedorismo, a inovação e a proteção dos direitos trabalhistas.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-09-Industria-Inovacao.png" alt="ODS 9 — Indústria, Inovação e Infraestrutura">
+            <div class="ods-texto">
+                <h2>ODS 9 — Indústria, Inovação e Infraestrutura</h2>
+                <p>A ODS 9 visa desenvolver infraestruturas de qualidade, confiáveis e sustentáveis, promovendo uma industrialização que gere empregos e riqueza sem agredir o meio ambiente, além de aumentar o investimento em pesquisa científica e garantir o acesso democrático às tecnologias de informação.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-10-Reducao-das-Desigualdades.png" alt="ODS 10 — Redução das Desigualdades">
+            <div class="ods-texto">
+                <h2>ODS 10 — Redução das Desigualdades</h2>
+                <p>A ODS 10 busca reduzir as disparidades de renda e oportunidade, promovendo a inclusão social, econômica e política de todos, independentemente de idade, gênero, deficiência, raça, etnia ou origem, além de garantir a migração segura e melhorar a regulamentação dos mercados financeiros globais.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-11-Cidades-Sustentaveis.png" alt="ODS 11 — Cidades e Comunidades Sustentáveis">
+            <div class="ods-texto">
+                <h2>ODS 11 — Cidades e Comunidades Sustentáveis</h2>
+                <p>A ODS 11 busca tornar as cidades mais seguras e sustentáveis, garantindo o acesso universal à habitação segura e a serviços básicos, expandindo o transporte público de qualidade, protegendo o patrimônio cultural e natural e reduzindo o impacto ambiental negativo das áreas urbanas.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-12-Consumo-Responsavel.png" alt="ODS 12 — Consumo e Produção Responsáveis">
+            <div class="ods-texto">
+                <h2>ODS 12 — Consumo e Produção Responsáveis</h2>
+                <p>A ODS 12 promove o consumo consciente, combatendo o desperdício de alimentos, reduzindo a geração de resíduos e incentivando a reciclagem e a produção industrial ecoeficiente.</p>
+            </div>
+        </article>
+        <article class="ods-card">
+            <img src="../img/ODS-13-Acao-Climatica.png" alt="ODS 13 — Ação Contra a Mudança Global do Clima">
+            <div class="ods-texto">
+                <h2>ODS 13 — Ação Contra a Mudança Global do Clima</h2>
+                <p>A ODS 13 busca combater a crise climática, fortalecendo a resiliência contra desastres naturais, integrando medidas ambientais nas políticas nacionais e expandindo a educação e a conscientização sobre o clima.</p>
+            </div>
+        </article>
+    </main>
 </body>
-</html>
